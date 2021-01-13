@@ -4,7 +4,7 @@ from database import DB
 
 
 class User:
-    def __init__(self, username, password):
+    def __init__(self, id, username, password):
         self.username = username
         self.password = password
 
