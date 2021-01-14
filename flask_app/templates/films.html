@@ -1,10 +1,21 @@
 {% extends "base.html" %}
 {% block title %}Film's collection{% endblock %}
 {% block content %}
-    <h1>Here is our film collection: </h1>
+    {% if usr %}
+        <h1>Hello {{ usr }}</h1>
+        <br/><br/><br/>
+        <h2>If you want to add new film to our collection:   <a href="/profile/add_film">Click here</a></h2>
+        <br/>
+        <h1>You previously added these films: </h1>
+    {% else %}
+        <h1>Here is our films collection: </h1>
+    {% endif %}
+
     <br/><br/>
-{% for film in films %}
-    <a href="/films/{{ film.film_id }}"><b>Name:</b> {{ film.name }} | Author: {{ film.author }}</a>
-    <br/><br/>
-{% endfor %}
+    {% if films %}
+        {% for film in films %}
+            <a href="/home/{{ film.film_id }}"><b>Name:</b> {{ film.name }} | Author: {{ film.author }}</a>
+            <br/><br/>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

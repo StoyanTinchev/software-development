@@ -16,6 +16,12 @@ class Film:
             return [Film(*row) for row in rows]
 
     @staticmethod
+    def films_by_author(name):
+        with DB() as db:
+            rows = db.execute('SELECT * FROM FILMS WHERE author LIKE ?', (name,)).fetchall()
+            return [Film(*row) for row in rows]
+
+    @staticmethod
     def find(film_id):
         with DB() as db:
             row = db.execute('SELECT * FROM FILMS WHERE film_id = ?', (film_id,)).fetchone()

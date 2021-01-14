@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Film{% endblock %}
 {% block content %}
-<h1>{{ post.name }}</h1>
-<h2>{{ post.author }}</h2>
+<h1>{{ film.name }}</h1>
+<h2>{{ film.author }}</h2>
 
 
     <hr>
 <p>
-{{ post.content }}
+{{ film.content }}
 </p>
 
 <a href="/posts/{{ post.post_id }}/edit">Edit post</a><br/><br/>
