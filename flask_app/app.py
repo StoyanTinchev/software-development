@@ -1,38 +1,37 @@
-from flask import Flask, session, flash
+from flask import Flask, flash, session
 from flask import render_template, redirect, url_for, request
-import hashlib
-from datetime import timedelta
+import os
 
-# from film import Film
-# from comment import Comment
+from film import Film
+from comment import Comment
 from users import User
 
 app = Flask(__name__)
-app.secret_key = hashlib.sha256("project".encode('utf-8')).hexdigest()
-
-# session.permanent = app.permanent_session_lifetime = timedelta(minutes=5)
+app.secret_key = os.urandom(12)
 
 
 @app.route('/')
 def go_to():
-    if "user" in session:
-        return redirect(url_for("home"))
-    else:
-        return redirect(url_for('log_home'))
+    if "usr" in session:
+        user = session["usr"]
+        if User.validate_username(user):
+            return redirect(url_for("home"))
+    session['log'] = False
+    return redirect(url_for("log_home"))
 
 
 @app.route('/log_home')
 def log_home():
-    return render_template("Before_log.html")
-
-
-@app.route('/home')
-def home():
-    return render_template("user.html")
+    if session["log"]:
+        return redirect(url_for("home"))
+    session['log'] = False  # because log_out redirect us here and session 'log' popped
+    return render_template("films.html")
 
 
 @app.route("/register", methods=["POST", "GET"])
 def register():
+    if session["log"]:
+        return redirect(url_for("home"))
     if request.method == "POST":
         username = request.form["username"]
         password = User.hash_password(request.form["password"])
@@ -54,13 +53,17 @@ def register():
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
+    if session["log"]:
+        return redirect(url_for("home"))
+
     if request.method == "POST":
-        user = User.find_by_username(request.form['usr'])
-        password = request.form['password']
+        user = User.find_by_username(request.form['username'])
+        password = User.hash_password(request.form["password"])
         if user and user.verify_password(password):
-            checkbox = request.form["remember"]
-            if checkbox:
-                session["user"] = checkbox
+            checkbox = request.form.get("remember")
+            session['log'] = True
+            if checkbox is not None:
+                session['usr'] = request.form['username']
             return redirect(url_for("home"))
         else:
             flash("Wrong username or password!", "info")
@@ -69,9 +72,17 @@ def login():
         return render_template("login.html")
 
 
-@app.route("/<user>")
-def usr(user):
-    return User.find_by_username(user)
+@app.route("/log_out")
+def log_out():
+    if 'usr' in session:
+        session.pop('log', None)
+        session.pop('usr', None)
+    return redirect(url_for("log_home"))
+
+
+@app.route('/home')
+def home():
+    return render_template("films.html", films=Film.all())
 
 
 if __name__ == '__main__':

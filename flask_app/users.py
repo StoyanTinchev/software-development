@@ -16,6 +16,20 @@ class User:
             return self
 
     @staticmethod
+    def validate_username(username):
+        if not username:
+            return False
+        with DB() as db:
+            row = db.execute(
+                'SELECT * FROM USERS WHERE username = ?',
+                (username,)
+            ).fetchone()
+            if row:
+                return True
+            else:
+                return False
+
+    @staticmethod
     def find_by_username(username):
         if not username:
             return None
@@ -32,4 +46,4 @@ class User:
         return hashlib.sha256(password.encode('utf-8')).hexdigest()
 
     def verify_password(self, password):
-        return self.password == hashlib.sha256(password.encode('utf-8')).hexdigest()
+        return self.password == password
