@@ -103,8 +103,33 @@ def show_film(film_id):
     if "usr" not in session:
         return redirect(url_for("go_to"))
     film = Film.find(film_id)
-
     return render_template("film.html", film=film)
+
+
+@app.route("/home/<int:film_id>/delete", methods=["POST"])
+def delete_film(film_id):
+    film = Film.find(film_id)
+    film.delete()
+    return redirect(url_for("home"))
+
+
+@app.route("/new_comment", methods=["POST"])
+def new_comment():
+    film = Film.find(request.form["film_id"])
+    Comment(*(None, film, request.form["message"])).create()
+    return redirect(url_for("show_film", film_id=film.film_id))
+
+
+@app.route("/home/<int:film_id>/edit", methods=["GET", "POST"])
+def edit_film(film_id):
+    film = Film.find(film_id)
+    if request.method == 'GET':
+        return render_template('edit_film.html', film=film)
+    elif request.method == 'POST':
+        film.name = request.form['film_name']
+        film.content = request.form['film_content']
+        film.save()
+        return redirect(url_for('show_film', film_id=film.film_id))
 
 
 if __name__ == "__main__":

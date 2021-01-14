@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Add film{% endblock %}
+{% block content %}
+<form action="#" method="POST">
+    <h1>Film</h1>
+    <br/><br/><br/>
+    <label>Film name: </label>
+    <input type="text" placeholder="Enter film name" name="film_name" value="{{ film.name }}">
+    </br>
+
+    <label>Content: </label>
+    <input type="text" placeholder="Enter film content" name="film_content" value="{{ film.content }}">
+    </br>
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
