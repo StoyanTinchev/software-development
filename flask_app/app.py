@@ -116,7 +116,7 @@ def delete_film(film_id):
 @app.route("/new_comment", methods=["POST"])
 def new_comment():
     film = Film.find(request.form["film_id"])
-    Comment(*(None, film, request.form["message"])).create()
+    Comment(*(None, request.form["message"], film)).create()
     return redirect(url_for("show_film", film_id=film.film_id))
 
 

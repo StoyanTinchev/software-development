@@ -9,8 +9,8 @@ class Comment:
 
     def create(self):
         with DB() as db:
-            values = (self.film.film_id, self.message)
-            db.execute('INSERT INTO COMMENTS (film_id, message) VALUES (?, ?)', values)
+            values = (self.message, self.film.film_id)
+            db.execute('INSERT INTO COMMENTS (message, film_id) VALUES (?, ?)', values)
             return self
 
     @staticmethod
