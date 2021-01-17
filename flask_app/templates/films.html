@@ -12,10 +12,58 @@
     {% endif %}
 
     <br/><br/>
-    {% if films %}
-        {% for film in films %}
-            <a href="/home/{{ film.film_id }}"><b>Name:</b> {{ film.name }} | Author: {{ film.author }}</a>
-            <br/><br/>
-        {% endfor %}
-    {% endif %}
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" id="myInput" onkeyup="searchFunction()"
+               placeholder="Search for names.." aria-label="Search">
+    </form>
+    <table id="myTable" class="table">
+	    <thead>
+		    <tr>
+			    <th>Title</th>
+			    <th>Added by</th>
+			    <th>Content</th>
+                <th></th>
+		    </tr>
+	    </thead>
+	    <tbody>
+	    {% if films %}
+            {% for film in films %}
+                <tr>
+                    <td>
+                        <a href="/home/{{film.film_id}}/{{ edit }}">{{film.name}}</a>
+                    </td>
+                    <td>{{ film.author }}</td>
+                    <td>{{ film.content }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+	    </tbody>
+    </table>
+    <script>
+    function searchFunction()
+    {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++)
+        {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td)
+            {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1)
+                {
+                    tr[i].style.display = "";
+                }
+                else
+                {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    </script>
+
 {% endblock %}

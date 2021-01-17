@@ -5,6 +5,7 @@ import os
 from film import Film
 from comment import Comment
 from users import User
+from ratings import Rating
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12)
@@ -75,14 +76,16 @@ def log_out():
 
 @app.route("/home")
 def home():
-    return render_template("films.html", films=Film.all(), usr=None)
+    return render_template("films.html", films=Film.all(),
+                           usr=None, edit=0)
 
 
 @app.route("/profile")
 def profile():
     if "usr" not in session:
         return redirect(url_for(go_to))
-    return render_template("films.html", films=Film.films_by_author(session["usr"]), usr=session["usr"])
+    return render_template("films.html", films=Film.films_by_author(session["usr"]),
+                           usr=session["usr"], edit=1)
 
 
 @app.route("/profile/add_film", methods=["GET", "POST"])
@@ -98,12 +101,12 @@ def add_film():
         return redirect(url_for("home"))
 
 
-@app.route("/home/<int:film_id>")
-def show_film(film_id):
+@app.route("/home/<int:film_id>/<int:edit>")
+def show_film(film_id, edit):
     if "usr" not in session:
         return redirect(url_for("go_to"))
     film = Film.find(film_id)
-    return render_template("film.html", film=film)
+    return render_template("film.html", film=film, edit=edit)
 
 
 @app.route("/home/<int:film_id>/delete", methods=["POST"])
@@ -130,6 +133,28 @@ def edit_film(film_id):
         film.content = request.form['film_content']
         film.save()
         return redirect(url_for('show_film', film_id=film.film_id))
+
+
+@app.route("/ratings/")
+def ratings():
+    if "usr" not in session:
+        return redirect(url_for(go_to))
+    films = Film.film_ratings()
+    return render_template("ratings.html", film=films)
+
+
+@app.route("/ratings/<int:film_id>", methods=["GET", "POST"])
+def rate_film(film_id):
+    current_film = Film.find(film_id)
+    if request.method == 'GET':
+        print('Get template')
+        return render_template('rate.html', film=current_film)
+    elif request.method == 'POST':
+        # values = (None, int(request.form['rate']), film_id)
+        # Rating(*values).create()
+        Rating.create(request.form['rate'], film_id)
+        print('Execute query')
+    return redirect(url_for('ratings'))
 
 
 if __name__ == "__main__":

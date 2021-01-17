@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Film{% endblock %}
 {% block content %}
-<h1>Film name: {{ film.name }}</h1>
-<h2>Added by: {{ film.author }}</h2>
+<h1>{{ film.name }}</h1>
+<p>Added by: {{ film.author }}</p>
 
 
     <hr>
@@ -10,11 +10,13 @@
 {{ film.content }}
 </p>
 
-<a href="/home/{{ film.film_id }}/edit">Edit film content</a><br/><br/>
-<form action="/home/{{ film.film_id }}/delete" method="POST">
-  <button type="submit">Delete film</button>
-</form>
-<br/>
+    {% if edit %}
+        <a href="/home/{{ film.film_id }}/edit">Edit film content</a><br/><br/>
+        <form action="/home/{{ film.film_id }}/delete" method="POST">
+          <button type="submit">Delete film</button>
+        </form>
+        <br/>
+    {% endif %}
 
 <form action="/new_comment" method="POST">
   <input type="text" name="message">
@@ -23,7 +25,7 @@
 </form>
 <div id="comments" style="border: 1px solid black">
 {% for comment in film.comments() %}
-  {{ comment.message }}
+  {{ film.author }}: {{ comment.message }}
   <br/>
   <br/>
 {% endfor %}

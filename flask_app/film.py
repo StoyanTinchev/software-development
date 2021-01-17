@@ -29,6 +29,18 @@ class Film:
                 return
             return Film(*row)
 
+    @staticmethod
+    def film_ratings():
+        with DB() as db:
+            rows = db.execute('''SELECT FILMS.film_id, FILMS.name, FILMS.author, FILMS.content, rating 
+                                   FROM FILMS
+                                   LEFT JOIN 
+                                   (SELECT ROUND(AVG(rating) ,2) as rating, film_id 
+                                     FROM RATINGS
+                                     GROUP BY film_id) as avg_ratings
+                                   ON FILMS.film_id= avg_ratings.film_id''').fetchall()
+            return rows
+
     def create(self):
         with DB() as db:
             values = (self.name, self.author, self.content)

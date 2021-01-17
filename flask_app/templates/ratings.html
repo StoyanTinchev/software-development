@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Film{% endblock %}
+{% block content %}
+
+<p><button onclick="sortTable()">Sort by highest rating</button></p>
+<table id="ratings" class="table">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Content</th>
+        <th>Rating</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for film_id, name, author, content, rating  in film %}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{author}}</td>
+        <td>{{content}}</td>
+        <td>{{rating}}</td>
+        <td>
+            <a href="/ratings/{{film_id}}" class="btn btn-default">Add rating</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    function sortTable()
+    {
+        var table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("ratings");
+        switching = true;
+
+        while (switching)
+        {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++)
+            {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[3];
+                y = rows[i + 1].getElementsByTagName("TD")[3];
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())
+                {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (shouldSwitch)
+            {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+            }
+        }
+    }
+</script>
+{% endblock %}
