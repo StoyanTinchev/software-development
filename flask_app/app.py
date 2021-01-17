@@ -116,11 +116,11 @@ def delete_film(film_id):
     return redirect(url_for("home"))
 
 
-@app.route("/new_comment", methods=["POST"])
-def new_comment():
+@app.route("/new_comment/<int:edit>", methods=["POST"])
+def new_comment(edit):
     film = Film.find(request.form["film_id"])
     Comment(*(None, request.form["message"], film)).create()
-    return redirect(url_for("show_film", film_id=film.film_id))
+    return redirect(url_for("show_film", film_id=film.film_id, edit=edit))
 
 
 @app.route("/home/<int:film_id>/edit", methods=["GET", "POST"])
