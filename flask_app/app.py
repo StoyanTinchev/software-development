@@ -132,7 +132,7 @@ def edit_film(film_id):
         film.name = request.form['film_name']
         film.content = request.form['film_content']
         film.save()
-        return redirect(url_for('show_film', film_id=film.film_id))
+        return redirect(url_for('show_film', film_id=film.film_id, edit=1))
 
 
 @app.route("/ratings/")
@@ -152,7 +152,11 @@ def rate_film(film_id):
     elif request.method == 'POST':
         # values = (None, int(request.form['rate']), film_id)
         # Rating(*values).create()
-        Rating.create(request.form['rate'], film_id)
+        rate = request.form['rate']
+        if int(rate) > 5 or int(rate) < 0:
+            flash("Please insert rating between 0 and 5!")
+            return render_template('rate.html', film=current_film)
+        Rating.create(rate, film_id)
         print('Execute query')
     return redirect(url_for('ratings'))
 

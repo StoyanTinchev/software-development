@@ -2,15 +2,13 @@
 {% block title %}Edit film{% endblock %}
 {% block content %}
 <form action="#" method="POST">
-    <h1>Film</h1>
-    <br/><br/><br/>
-    <label>Film name: </label>
+    <h2>Film name: </h2>
     <input type="text" placeholder="Enter film name" name="film_name" value="{{ film.name }}">
-    </br>
+    <br><br><br>
 
-    <label>Content: </label>
-    <input type="text" placeholder="Enter film content" name="film_content" value="{{ film.content }}">
-    </br>
+    <h2>Content: </h2>
+    <textarea id="text" name="film_content" rows="12" cols="100" value="{{ film.content }}"></textarea>
+    <br>
 
     <button type="submit">Submit</button>
 </form>

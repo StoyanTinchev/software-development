@@ -12,11 +12,19 @@
     <hr>
 <p>
 {{ film.content }}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 </p>
   <label>Rating</label>
   <input name="rate" value="5" min="1" max="5"/>
     <button type="submit">Submit</button>
-  </br>
+  <br>
 </form>
 
 

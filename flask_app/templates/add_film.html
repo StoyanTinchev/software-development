@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 {% block title %}Add film{% endblock %}
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='add_film.css') }}">
 <form action="#" method="POST">
-    <label><h2>Enter film name: </h2></label>
-</br>
+    <h2>Enter film name: </h2>
     <input type="text" placeholder="Enter film name" name="film_name" required>
-    </br>
+    <br><br><br>
 
-    <label><h2>Enter film content: </h2></label>
-</br>
-    <input type="text" placeholder="Enter film content" name="film_content" required>
-    </br>
+    <h2>Enter film content: </h2>
+    <div>
+        <textarea id="text" name="film_content" rows="12" cols="100"></textarea>
+    </div>
+    <br>
 
     <button type="submit">Submit</button>
 </form>
