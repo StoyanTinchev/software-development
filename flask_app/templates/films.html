@@ -16,6 +16,13 @@
         <input class="form-control mr-sm-2" type="search" id="myInput" onkeyup="searchFunction()"
                placeholder="Search for names.." aria-label="Search">
     </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     <table id="myTable" class="table">
 	    <thead>
 		    <tr>

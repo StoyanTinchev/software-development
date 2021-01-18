@@ -104,6 +104,7 @@ def add_film():
 @app.route("/home/<int:film_id>")
 def show_film(film_id):
     if "usr" not in session:
+        flash("To see film content - please login!")
         return redirect(url_for("go_to"))
     film = Film.find(film_id)
     return render_template("film.html", film=film, edit=session["usr"])
@@ -148,17 +149,17 @@ def ratings():
 def rate_film(film_id):
     current_film = Film.find(film_id)
     if request.method == 'GET':
-        print('Get template')
         return render_template('rate.html', film=current_film)
     elif request.method == 'POST':
-        # values = (None, int(request.form['rate']), film_id)
-        # Rating(*values).create()
         rate = request.form['rate']
-        if int(rate) > 5 or int(rate) < 0:
+        try:
+            if int(rate) > 5 or int(rate) < 0:
+                flash("Please insert rating between 0 and 5!")
+                return render_template('rate.html', film=current_film)
+        except Exception as err:
             flash("Please insert rating between 0 and 5!")
             return render_template('rate.html', film=current_film)
         Rating.create(rate, film_id)
-        print('Execute query')
     return redirect(url_for('ratings'))
 
 
