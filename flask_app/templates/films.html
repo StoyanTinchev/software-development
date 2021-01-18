@@ -30,7 +30,7 @@
             {% for film in films %}
                 <tr>
                     <td>
-                        <a href="/home/{{film.film_id}}/{{ edit }}">{{film.name}}</a>
+                        <a href="/home/{{film.film_id}}">{{film.name}}</a>
                     </td>
                     <td>{{ film.author }}</td>
                     <td>{{ film.content[:20] }}...</td>

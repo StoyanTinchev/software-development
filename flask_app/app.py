@@ -77,7 +77,7 @@ def log_out():
 @app.route("/home")
 def home():
     return render_template("films.html", films=Film.all(),
-                           usr=None, edit=0)
+                           usr=None)
 
 
 @app.route("/profile")
@@ -85,7 +85,7 @@ def profile():
     if "usr" not in session:
         return redirect(url_for(go_to))
     return render_template("films.html", films=Film.films_by_author(session["usr"]),
-                           usr=session["usr"], edit=1)
+                           usr=session["usr"])
 
 
 @app.route("/profile/add_film", methods=["GET", "POST"])
@@ -101,12 +101,12 @@ def add_film():
         return redirect(url_for("home"))
 
 
-@app.route("/home/<int:film_id>/<int:edit>")
-def show_film(film_id, edit):
+@app.route("/home/<int:film_id>")
+def show_film(film_id):
     if "usr" not in session:
         return redirect(url_for("go_to"))
     film = Film.find(film_id)
-    return render_template("film.html", film=film, edit=edit)
+    return render_template("film.html", film=film, edit=session["usr"])
 
 
 @app.route("/home/<int:film_id>/delete", methods=["POST"])
@@ -116,23 +116,24 @@ def delete_film(film_id):
     return redirect(url_for("home"))
 
 
-@app.route("/new_comment/<int:edit>", methods=["POST"])
-def new_comment(edit):
+@app.route("/new_comment", methods=["POST"])
+def new_comment():
     film = Film.find(request.form["film_id"])
-    Comment(*(None, request.form["message"], film)).create()
-    return redirect(url_for("show_film", film_id=film.film_id, edit=edit))
+    user = session["usr"]
+    Comment(*(None, request.form["message"], user, film)).create()
+    return redirect(url_for("show_film", film_id=film.film_id))
 
 
 @app.route("/home/<int:film_id>/edit", methods=["GET", "POST"])
 def edit_film(film_id):
     film = Film.find(film_id)
     if request.method == 'GET':
-        return render_template('edit_film.html', film=film)
+        return render_template('add_film.html', film=film)
     elif request.method == 'POST':
         film.name = request.form['film_name']
         film.content = request.form['film_content']
         film.save()
-        return redirect(url_for('show_film', film_id=film.film_id, edit=1))
+        return redirect(url_for('show_film', film_id=film.film_id))
 
 
 @app.route("/ratings/")

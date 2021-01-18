@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Add film{% endblock %}
 {% block content %}
-<form action="#" method="POST">
+<form action="#" method="POST" onsubmit="addlines()">
     <h2>Enter film name: </h2>
     <input type="text" placeholder="Enter film name" name="film_name" required>
     <br><br><br>
@@ -9,7 +9,7 @@
     <h2>Enter film content: </h2>
     <div>
         <textarea id="text" name="film_content" rows="12" cols="100"></textarea>
-    </div>
+        </div>
     <br>
 
     <button type="submit">Submit</button>

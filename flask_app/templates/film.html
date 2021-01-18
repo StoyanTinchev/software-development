@@ -10,7 +10,7 @@
 {{ film.content }}
 </p>
 
-    {% if edit %}
+    {% if edit==film.author %}
         <a href="/home/{{ film.film_id }}/edit">Edit film content</a><br><br>
         <form action="/home/{{ film.film_id }}/delete" method="POST">
           <button type="submit">Delete film</button>
@@ -18,14 +18,14 @@
         <br>
     {% endif %}
 
-<form action="/new_comment/{{ edit }}" method="POST">
+<form action="/new_comment" method="POST">
   <input type="text" name="message">
   <input type="hidden" name="film_id" value="{{ film.film_id }}">
   <button type="submit">Create comment</button>
 </form>
 <div id="comments" style="border: 1px solid black">
 {% for comment in film.comments() %}
-  {{ film.author }}: {{ comment.message }}
+  {{ comment.added_by }}: {{ comment.message }}
   <br>
   <br>
 {% endfor %}

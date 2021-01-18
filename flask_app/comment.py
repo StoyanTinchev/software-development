@@ -2,15 +2,16 @@ from database import DB
 
 
 class Comment:
-    def __init__(self, comment_id, message, film):
+    def __init__(self, comment_id, message, added_by, film):
         self.comment_id = comment_id
         self.message = message
+        self.added_by = added_by
         self.film = film
 
     def create(self):
         with DB() as db:
-            values = (self.message, self.film.film_id)
-            db.execute('INSERT INTO COMMENTS (message, film_id) VALUES (?, ?)', values)
+            values = (self.message, self.added_by, self.film.film_id)
+            db.execute('INSERT INTO COMMENTS (message, added_by, film_id) VALUES (?, ?, ?)', values)
             return self
 
     @staticmethod

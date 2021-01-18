@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS COMMENTS
     (
         comment_id INTEGER PRIMARY KEY AUTOINCREMENT,
         message TEXT,
+        added_by TEXT,
         film_id INTEGER,
         FOREIGN KEY(film_id) REFERENCES FILMS(film_id)
     )
