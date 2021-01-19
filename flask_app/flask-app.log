@@ -1,0 +1,10 @@
+[01-19 22:02:27] p13650 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-19 22:02:27] p13654 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-19 22:03:29] p13654 {/home/with/Desktop/software-development/flask_app/app.py:53} INFO - danirogachev registered successfully!
+[01-19 22:03:38] p13654 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - <users.User object at 0x7f7e027aea00> logged in successfully
+[01-19 22:05:48] p13896 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-19 22:06:21] p13896 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - Stoyan logged in successfully
+[01-19 22:06:34] p13896 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - Stoyan logged out
+[01-19 22:06:46] p13896 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - Stoyan logged in successfully
+[01-19 22:07:04] p13896 {/home/with/Desktop/software-development/flask_app/app.py:186} INFO - Stoyan add a rating to the film Areeee
+[01-19 22:11:01] p14139 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
