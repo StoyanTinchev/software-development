@@ -1,10 +1,16 @@
-[01-19 22:02:27] p13650 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
-[01-19 22:02:27] p13654 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
-[01-19 22:03:29] p13654 {/home/with/Desktop/software-development/flask_app/app.py:53} INFO - danirogachev registered successfully!
-[01-19 22:03:38] p13654 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - <users.User object at 0x7f7e027aea00> logged in successfully
-[01-19 22:05:48] p13896 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
-[01-19 22:06:21] p13896 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - Stoyan logged in successfully
-[01-19 22:06:34] p13896 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - Stoyan logged out
-[01-19 22:06:46] p13896 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - Stoyan logged in successfully
-[01-19 22:07:04] p13896 {/home/with/Desktop/software-development/flask_app/app.py:186} INFO - Stoyan add a rating to the film Areeee
-[01-19 22:11:01] p14139 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-21 20:22:39] p10222 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-21 20:22:39] p10225 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-21 20:23:08] p10225 {/home/with/Desktop/software-development/flask_app/app.py:53} INFO - 'user1234' registered successfully!
+[01-21 20:23:20] p10225 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
+[01-21 20:24:37] p10225 {/home/with/Desktop/software-development/flask_app/app.py:120} DEBUG - Film with id 'None' is created
+[01-21 20:25:01] p10225 {/home/with/Desktop/software-development/flask_app/app.py:120} DEBUG - Film with id 'None' is created
+[01-21 20:25:30] p10225 {/home/with/Desktop/software-development/flask_app/app.py:120} DEBUG - Film with id 'None' is created
+[01-21 20:25:33] p10225 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - 'user1234' logged out
+[01-21 20:25:46] p10225 {/home/with/Desktop/software-development/flask_app/app.py:53} INFO - 'user4321' registered successfully!
+[01-21 20:25:52] p10225 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user4321' logged in successfully
+[01-21 20:26:09] p10225 {/home/with/Desktop/software-development/flask_app/app.py:120} DEBUG - Film with id 'None' is created
+[01-21 20:26:23] p10225 {/home/with/Desktop/software-development/flask_app/app.py:120} DEBUG - Film with id 'None' is created
+[01-21 20:26:46] p10225 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - 'user4321' logged out
+[01-21 20:26:59] p10225 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
+[01-21 20:27:13] p10225 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - 'user1234' logged out
+[01-21 20:27:17] p10225 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
