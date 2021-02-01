@@ -14,3 +14,32 @@
 [01-21 20:26:59] p10225 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
 [01-21 20:27:13] p10225 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - 'user1234' logged out
 [01-21 20:27:17] p10225 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
+[01-22 07:22:05] p4417 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 07:22:06] p4420 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 07:22:31] p4420 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
+[01-22 07:24:15] p4596 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 07:24:20] p4596 {/home/with/Desktop/software-development/flask_app/app.py:79} WARNING - 'Stoyan' is NOT logged!
+[01-22 07:25:13] p4596 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
+[01-22 08:05:02] p5569 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:05:03] p5572 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:05:51] p5785 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:05:51] p5788 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:06:37] p5897 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:06:37] p5900 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:07:10] p5978 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:07:10] p5981 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:52:44] p6773 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:52:44] p6780 {/home/with/Desktop/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[01-22 08:53:08] p6780 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
+[01-22 08:53:10] p6780 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - 'user1234' logged out
+[01-22 08:53:18] p6780 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
+[01-22 08:53:51] p6780 {/home/with/Desktop/software-development/flask_app/app.py:186} INFO - 'user1234' add a rating to the film 'Палм Спрингс (2020)'
+[01-22 08:54:01] p6780 {/home/with/Desktop/software-development/flask_app/app.py:186} INFO - 'user1234' add a rating to the film 'За душата (2020)'
+[01-22 08:54:03] p6780 {/home/with/Desktop/software-development/flask_app/app.py:186} INFO - 'user1234' add a rating to the film 'Подмяна на принцесата 2 (2020)'
+[01-22 08:54:06] p6780 {/home/with/Desktop/software-development/flask_app/app.py:186} INFO - 'user1234' add a rating to the film 'Момиче с потенциал (2020)'
+[01-22 08:54:11] p6780 {/home/with/Desktop/software-development/flask_app/app.py:186} INFO - 'user1234' add a rating to the film 'Мулан (2020)'
+[01-22 08:54:45] p6780 {/home/with/Desktop/software-development/flask_app/app.py:76} INFO - 'user1234' logged in successfully
+[01-22 08:55:13] p6780 {/home/with/Desktop/software-development/flask_app/app.py:120} DEBUG - Film with id 'None' is created
+[01-22 08:55:43] p6780 {/home/with/Desktop/software-development/flask_app/app.py:159} DEBUG - Film with id '6' edited
+[01-22 08:56:39] p6780 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - 'user1234' logged out
+[01-22 08:56:58] p6780 {/home/with/Desktop/software-development/flask_app/app.py:48} INFO - 'user1234' wants to register again!

@@ -76,7 +76,7 @@ def login():
             app.logger.info("'%s' logged in successfully", user.username)
             return redirect(url_for("home"))
         else:
-            app.logger.warn("'%s' is NOT logged!", user.username)
+            app.logger.warn("'%s' is NOT logged!", request.form["username"])
             flash("Wrong username or password!", "info")
             return render_template("login.html")
     elif request.method == "GET":
