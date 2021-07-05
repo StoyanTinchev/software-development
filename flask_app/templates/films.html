@@ -4,7 +4,7 @@
     {% if usr %}
         <h1>Hello {{ usr }}</h1>
         <br><br><br>
-        <h2>If you want to add new film to our collection:   <a href="/profile/add_film">Click here</a></h2>
+        <h2>If you want to add new film to our collection: <a href="/profile/add_film">Click here</a></h2>
         <br>
         <h1>You previously added these films: </h1>
     {% else %}
@@ -24,53 +24,47 @@
         {% endif %}
     {% endwith %}
     <table id="myTable" class="table">
-	    <thead>
-		    <tr>
-			    <th>Title</th>
-			    <th>Added by</th>
-			    <th>Content</th>
-                <th></th>
-		    </tr>
-	    </thead>
-	    <tbody>
-	    {% if films %}
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Added by</th>
+            <th>Content</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if films %}
             {% for film in films %}
                 <tr>
                     <td>
-                        <a href="/home/{{film.film_id}}">{{film.name}}</a>
+                        <a href="/home/{{ film.film_id }}">{{ film.name }}</a>
                     </td>
                     <td>{{ film.author }}</td>
                     <td>{{ film.content[:20] }}...</td>
                 </tr>
             {% endfor %}
         {% endif %}
-	    </tbody>
+        </tbody>
     </table>
     <script>
-    function searchFunction()
-    {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++)
-        {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td)
-            {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1)
-                {
-                    tr[i].style.display = "";
-                }
-                else
-                {
-                    tr[i].style.display = "none";
+        function searchFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
                 }
             }
         }
-    }
     </script>
 
 {% endblock %}

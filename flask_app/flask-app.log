@@ -43,3 +43,15 @@
 [01-22 08:55:43] p6780 {/home/with/Desktop/software-development/flask_app/app.py:159} DEBUG - Film with id '6' edited
 [01-22 08:56:39] p6780 {/home/with/Desktop/software-development/flask_app/app.py:89} INFO - 'user1234' logged out
 [01-22 08:56:58] p6780 {/home/with/Desktop/software-development/flask_app/app.py:48} INFO - 'user1234' wants to register again!
+[07-05 19:19:48] p159137 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[07-05 19:19:49] p159141 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[07-05 19:20:10] p159980 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[07-05 19:20:10] p159982 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[07-05 19:20:40] p161624 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[07-05 19:21:10] p162450 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[07-05 19:21:27] p163270 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[07-05 19:21:28] p163272 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[07-05 19:22:29] p163272 {/home/with/Desktop/Repos/software-development/flask_app/app.py:79} WARNING - 'Stoyan' is NOT logged!
+[07-05 19:24:20] p163272 {/home/with/Desktop/Repos/software-development/flask_app/app.py:53} INFO - 'Stoyan' registered successfully!
+[07-05 19:24:31] p163272 {/home/with/Desktop/Repos/software-development/flask_app/app.py:76} INFO - 'Stoyan' logged in successfully
+[07-05 19:27:54] p179143 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.

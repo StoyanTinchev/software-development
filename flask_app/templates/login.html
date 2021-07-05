@@ -2,29 +2,29 @@
 {% block title %}Login{% endblock %}
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
-<form action="#" method="POST">
-  <div class="container">
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <form action="#" method="POST">
+        <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
 
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for msg in messages %}
-                <p>{{ msg }}</p>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for msg in messages %}
+                        <p>{{ msg }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
 
-    <button type="submit">Login</button>
-    <input type="checkbox" value="1" name="remember"> Remember me
-  </div>
+            <button type="submit">Login</button>
+            <input type="checkbox" value="1" name="remember"> Remember me
+        </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-      <a href = "/home">
-            <button type="button" class="cancelbtn">Cancel</button>
-      </a>
-  </div>
-</form>
+        <div class="container" style="background-color:#f1f1f1">
+            <a href="/home">
+                <button type="button" class="cancelbtn">Cancel</button>
+            </a>
+        </div>
+    </form>
 {% endblock %}

@@ -295,3 +295,55 @@
 [2021-01-22 08:56:58,013] p6780 {/home/with/Desktop/software-development/flask_app/app.py:48} INFO - 'user1234' wants to register again!
 [2021-01-22 08:56:58,016] p6780 {/home/with/Desktop/software-development/flask_app/venv/lib/python3.8/site-packages/werkzeug/_internal.py:113} INFO - 127.0.0.1 - - [22/Jan/2021 08:56:58] "[37mPOST /register HTTP/1.1[0m" 200 -
 [2021-01-22 08:56:58,153] p6780 {/home/with/Desktop/software-development/flask_app/venv/lib/python3.8/site-packages/werkzeug/_internal.py:113} INFO - 127.0.0.1 - - [22/Jan/2021 08:56:58] "[37mGET /register HTTP/1.1[0m" 200 -
+[2021-07-05 19:19:48,843] p159137 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[2021-07-05 19:19:48,857] p159137 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-05 19:19:48,859] p159137 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Restarting with stat
+[2021-07-05 19:19:49,178] p159141 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[2021-07-05 19:19:49,191] p159141 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} WARNING -  * Debugger is active!
+[2021-07-05 19:19:49,290] p159141 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Debugger PIN: 133-724-846
+[2021-07-05 19:20:10,436] p159980 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[2021-07-05 19:20:10,448] p159980 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-05 19:20:10,451] p159980 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Restarting with stat
+[2021-07-05 19:20:10,739] p159982 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[2021-07-05 19:20:10,751] p159982 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} WARNING -  * Debugger is active!
+[2021-07-05 19:20:10,751] p159982 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Debugger PIN: 133-724-846
+[2021-07-05 19:20:40,978] p161624 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[2021-07-05 19:21:10,739] p162450 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[2021-07-05 19:21:10,748] p162450 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-05 19:21:27,713] p163270 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[2021-07-05 19:21:27,725] p163270 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2021-07-05 19:21:27,727] p163270 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Restarting with stat
+[2021-07-05 19:21:28,011] p163272 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.
+[2021-07-05 19:21:28,014] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} WARNING -  * Debugger is active!
+[2021-07-05 19:21:28,023] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Debugger PIN: 133-724-846
+[2021-07-05 19:22:11,459] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:11] "[32mGET / HTTP/1.1[0m" 302 -
+[2021-07-05 19:22:11,481] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:11] "GET /home HTTP/1.1" 200 -
+[2021-07-05 19:22:11,925] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:11] "GET /home HTTP/1.1" 200 -
+[2021-07-05 19:22:17,954] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:17] "GET /home HTTP/1.1" 200 -
+[2021-07-05 19:22:18,197] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:18] "GET /home HTTP/1.1" 200 -
+[2021-07-05 19:22:23,639] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:23] "GET /login HTTP/1.1" 200 -
+[2021-07-05 19:22:23,727] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:23] "GET /static/login.css HTTP/1.1" 200 -
+[2021-07-05 19:22:23,890] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:23] "GET /login HTTP/1.1" 200 -
+[2021-07-05 19:22:29,930] p163272 {/home/with/Desktop/Repos/software-development/flask_app/app.py:79} WARNING - 'Stoyan' is NOT logged!
+[2021-07-05 19:22:29,931] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:29] "POST /login HTTP/1.1" 200 -
+[2021-07-05 19:22:29,958] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:29] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+[2021-07-05 19:22:30,023] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:22:30] "GET /login HTTP/1.1" 200 -
+[2021-07-05 19:24:12,737] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:12] "GET /register HTTP/1.1" 200 -
+[2021-07-05 19:24:12,800] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:12] "GET /static/register.css HTTP/1.1" 200 -
+[2021-07-05 19:24:12,875] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:12] "GET /register HTTP/1.1" 200 -
+[2021-07-05 19:24:20,964] p163272 {/home/with/Desktop/Repos/software-development/flask_app/app.py:53} INFO - 'Stoyan' registered successfully!
+[2021-07-05 19:24:20,965] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:20] "[32mPOST /register HTTP/1.1[0m" 302 -
+[2021-07-05 19:24:20,970] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:20] "GET /home HTTP/1.1" 200 -
+[2021-07-05 19:24:21,188] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:21] "GET /home HTTP/1.1" 200 -
+[2021-07-05 19:24:26,927] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:26] "GET /login HTTP/1.1" 200 -
+[2021-07-05 19:24:27,017] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:27] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+[2021-07-05 19:24:27,160] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:27] "GET /login HTTP/1.1" 200 -
+[2021-07-05 19:24:31,609] p163272 {/home/with/Desktop/Repos/software-development/flask_app/app.py:76} INFO - 'Stoyan' logged in successfully
+[2021-07-05 19:24:31,612] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2021-07-05 19:24:31,625] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:31] "GET /home HTTP/1.1" 200 -
+[2021-07-05 19:24:31,858] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:31] "GET /home HTTP/1.1" 200 -
+[2021-07-05 19:24:34,663] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:34] "GET /profile HTTP/1.1" 200 -
+[2021-07-05 19:24:34,947] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO - 127.0.0.1 - - [05/Jul/2021 19:24:34] "GET /profile HTTP/1.1" 200 -
+[2021-07-05 19:27:54,097] p163272 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Detected change in '/home/with/Desktop/Repos/software-development/flask_app/film.py', reloading
+[2021-07-05 19:27:54,135] p163270 {/home/with/.local/lib/python3.8/site-packages/werkzeug/_internal.py:225} INFO -  * Restarting with stat
+[2021-07-05 19:27:54,458] p179143 {/home/with/Desktop/Repos/software-development/flask_app/app.py:25} INFO - Logging is set up.

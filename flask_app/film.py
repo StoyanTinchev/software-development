@@ -1,5 +1,5 @@
-from database import DB
 from comment import Comment
+from database import DB
 
 
 class Film:

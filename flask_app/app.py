@@ -1,12 +1,12 @@
+import logging
+import os
 from flask import Flask, flash, session
 from flask import render_template, redirect, url_for, request
-import os
-import logging
 
-from film import Film
 from comment import Comment
-from users import User
+from film import Film
 from ratings import Rating
+from users import User
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12)
